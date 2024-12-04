@@ -34,11 +34,15 @@ def find_mul(parsed_lines):
 print(find_mul(parsed_lines))
 # 175015740
 	
-
-
-
-
-
-
-
 # Part 2
+
+def find_mul_with_do_dont(parsed_lines):
+	combined_string = ' '.join([' '.join(line) for line in parsed_lines])
+	pattern = r"don't\(\).*?do\(\)"
+	modified_string = re.sub(pattern, '', combined_string)
+	return find_mul([modified_string.split()])
+	
+
+print(find_mul_with_do_dont(parsed_lines))
+#112272912
+
