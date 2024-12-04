@@ -72,6 +72,7 @@ def check_levels_2(levels):
 parsed_lines = to_ints(parsed_lines)
 levels = check_levels(parsed_lines)
 print("FIRST PART:", check_levels_2(levels))
+#524
 
 def check_levels_3(lines, levels):
     score = check_levels_2(levels)
